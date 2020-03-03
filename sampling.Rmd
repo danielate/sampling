@@ -1,0 +1,30 @@
+---
+title: "sampling"
+author: "Daniela Teran"
+date: "3/3/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(googlesheets4)
+library(tidyverse)
+
+
+```
+
+```{r}
+
+sheets_deauth()
+
+x <- read_sheet(ss = "14HmwN2cEVAJHupuehCuLdwG9BXtR3COrxDgaaylLhkA")
+
+```
+```{r}
+
+reds <- x %>%
+  arrange(desc(Red))
+
+```
+
